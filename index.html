@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>1.1 List of Users</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script>
+      fetch('users.json').then(response => {
+        return response.json();
+      }).then(UserData => {
+        var display = JSON.stringify(UserData);
+        document.body.innerHTML = display;
+        console.log(UserData);
+      }).catch(error => {
+        console.log(error);
+      });
+    </script>
+  </body>
+</html>
